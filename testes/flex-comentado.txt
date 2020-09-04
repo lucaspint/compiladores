@@ -1,0 +1,35 @@
+%{
+	//cod em C, todos os pré processamentos
+	//biblioteca
+	//funções
+	//structs
+	//define
+%}
+// Regras \/ expressões regulares
+
+NUM [0-9]+
+LETRA [a-z]+
+
+%%
+\\  \/  TOKENS
+
+"FIM" {
+		printf("Fim do programa\n");
+		}
+
+{NUM} {
+		printf ("% -> Número", yytext);
+		}
+		
+{LETRA} {
+		printf ("%s -> Caractere", yytext);
+		}
+
+%%
+
+int main(){
+	yyin = fopen("prog1.pinto","r");
+	yylex();
+	fclose(yyin);
+return 0;
+}

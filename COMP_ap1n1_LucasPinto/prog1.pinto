@@ -1,0 +1,14 @@
+float a ,b , c
+START
+lout<< " Sua primeira nota " @ comentário
+lin>> ( $a )
+lout<< " Sua segunda nota "
+lin>> ( $b )
+c = (a + b) /2
+lout<< " Sua media : "
+lin>> (c )
+if ( c > 7)
+lout<< " Aprovado "
+else
+lout<< ( Reprovado )
+END
